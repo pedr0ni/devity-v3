@@ -47,6 +47,7 @@ export default function FAQ() {
               my="1rem"
               bgColor="white"
               borderRadius="6px"
+              key={question.title}
             >
               <h2>
                 <AccordionButton py="1.5rem">
