@@ -40,7 +40,7 @@ export default function FAQ() {
       <Topic label="PERGUNTAS FREQUENTES" title="FAQ" text="" />
 
       <Container maxW="container.md">
-        <Accordion>
+        <Accordion allowMultiple>
           {questions.map(question => (
             <AccordionItem
               border="none"
