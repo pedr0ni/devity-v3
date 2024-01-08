@@ -8,6 +8,7 @@ import {
   Container,
 } from '@chakra-ui/react';
 import Topic from '../Topic/Topic';
+import AnimatedView from '../Animated/AnimatedView';
 
 const questions = [
   {
@@ -42,23 +43,25 @@ export default function FAQ() {
       <Container maxW="container.md">
         <Accordion allowMultiple>
           {questions.map(question => (
-            <AccordionItem
-              border="none"
-              my="1rem"
-              bgColor="white"
-              borderRadius="6px"
-              key={question.title}
-            >
-              <h2>
-                <AccordionButton py="1.5rem">
-                  <Box as="span" flex="1" textAlign="left" fontWeight="bold">
-                    {question.title}
-                  </Box>
-                  <AccordionIcon />
-                </AccordionButton>
-              </h2>
-              <AccordionPanel pb={4}>{question.body}</AccordionPanel>
-            </AccordionItem>
+            <AnimatedView animation="from-left">
+              <AccordionItem
+                border="none"
+                my="1rem"
+                bgColor="white"
+                borderRadius="6px"
+                key={question.title}
+              >
+                <h2>
+                  <AccordionButton py="1.5rem">
+                    <Box as="span" flex="1" textAlign="left" fontWeight="bold">
+                      {question.title}
+                    </Box>
+                    <AccordionIcon />
+                  </AccordionButton>
+                </h2>
+                <AccordionPanel pb={4}>{question.body}</AccordionPanel>
+              </AccordionItem>
+            </AnimatedView>
           ))}
         </Accordion>
       </Container>
