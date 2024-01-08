@@ -2,6 +2,7 @@ import {Box, Button, Container, Flex} from '@chakra-ui/react';
 import Topic from '../Topic/Topic';
 import {IoArrowForward} from 'react-icons/io5';
 import AnimatedView from '../Animated/AnimatedView';
+import openWhatsApp from '../../functions/openWhatsApp/openWhatsApp';
 
 export default function CallToAction() {
   return (
@@ -15,7 +16,11 @@ export default function CallToAction() {
           />
 
           <Flex justifyContent="center">
-            <Button colorScheme="brand" rightIcon={<IoArrowForward />}>
+            <Button
+              onClick={openWhatsApp}
+              colorScheme="brand"
+              rightIcon={<IoArrowForward />}
+            >
               Agendar consultoria
             </Button>
           </Flex>

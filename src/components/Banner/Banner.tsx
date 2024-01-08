@@ -11,6 +11,7 @@ import {
 import Header from '../Header/Header';
 import MainContent from '../../assets/img/main-content.svg';
 import AnimatedView from '../Animated/AnimatedView';
+import openWhatsApp from '../../functions/openWhatsApp/openWhatsApp';
 
 export default function Banner() {
   return (
@@ -20,7 +21,6 @@ export default function Banner() {
         height="100vh"
         position="relative"
         overflow="hidden"
-        // background="linear-gradient(to top, #fad78c, #fff);"
         bgGradient="linear(to-t, brand.100, whiteAlpha.100)"
       >
         <Header />
@@ -66,7 +66,9 @@ export default function Banner() {
                     bgColor="white"
                     placeholder="Digite seu e-mail"
                   />
-                  <Button colorScheme="brand">Agendar</Button>
+                  <Button onClick={openWhatsApp} colorScheme="brand">
+                    Agendar
+                  </Button>
                 </Flex>
                 <Text color="gray.600">Consultoria gratuita</Text>
               </Flex>

@@ -15,6 +15,9 @@ const theme = extendTheme({
       500: '#f12711',
       600: '#f74c39',
     },
+    instagram: {
+      500: '#E1306C',
+    },
   },
   fonts: {
     body: 'Spline Sans, sans-serif',

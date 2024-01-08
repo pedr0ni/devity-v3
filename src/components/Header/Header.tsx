@@ -1,6 +1,7 @@
 import {Box, Button, Container, Flex, Image} from '@chakra-ui/react';
 import LogoPrimary from '../../assets/img/logo-primary-2.png';
 import HeaderLink from '../HeaderLink/HeaderLink';
+import openWhatsApp from '../../functions/openWhatsApp/openWhatsApp';
 
 export default function Header() {
   const scrollTo = (el: string) => {
@@ -26,7 +27,11 @@ export default function Header() {
             Parceiros
           </HeaderLink>
         </Flex>
-        <Button display={{base: 'none', md: 'flex'}} colorScheme="brand">
+        <Button
+          onClick={openWhatsApp}
+          display={{base: 'none', md: 'flex'}}
+          colorScheme="brand"
+        >
           Fale Conosco
         </Button>
       </Container>

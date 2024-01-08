@@ -9,7 +9,9 @@ import Footer from './components/Footer/Footer';
 import {useEffect, useState} from 'react';
 
 function App() {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(
+    process.env.NODE_ENV !== 'development'
+  );
 
   useEffect(() => {
     setTimeout(() => setLoading(false), 1000);

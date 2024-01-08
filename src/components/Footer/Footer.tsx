@@ -10,8 +10,11 @@ import {
   Text,
   VStack,
 } from '@chakra-ui/react';
-import {IoLogoWhatsapp, IoMailOutline} from 'react-icons/io5';
+import {IoLogoInstagram, IoLogoWhatsapp, IoMailOutline} from 'react-icons/io5';
 import LogoPrimary from '../../assets/img/logo-primary-2.png';
+import openWhatsApp from '../../functions/openWhatsApp/openWhatsApp';
+import openMail from '../../functions/openMail/openMail';
+import openInstagram from '../../functions/openInstagram/openInstagram';
 
 const CustomLink = ({children, ...props}: LinkProps) => {
   return (
@@ -86,11 +89,22 @@ export default function Footer() {
             icon={<IoLogoWhatsapp />}
             aria-label="WhatsApp"
             colorScheme="whatsapp"
+            onClick={openWhatsApp}
+            fontSize="1.2rem"
           />
           <IconButton
             icon={<IoMailOutline />}
             aria-label="E-mail"
             colorScheme="blue"
+            onClick={openMail}
+            fontSize="1.2rem"
+          />
+          <IconButton
+            icon={<IoLogoInstagram />}
+            aria-label="Instagram"
+            colorScheme="instagram"
+            onClick={openInstagram}
+            fontSize="1.2rem"
           />
         </Stack>
       </Stack>
