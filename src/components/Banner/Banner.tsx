@@ -11,7 +11,7 @@ import {
 import Header from '../Header/Header';
 import MainContent from '../../assets/img/main-content.svg';
 import AnimatedView from '../Animated/AnimatedView';
-import openWhatsApp from '../../functions/openWhatsApp/openWhatsApp';
+import openCalendar from '../../functions/openCalendar/openCalendar';
 
 export default function Banner() {
   return (
@@ -66,7 +66,7 @@ export default function Banner() {
                     bgColor="white"
                     placeholder="Digite seu e-mail"
                   />
-                  <Button onClick={openWhatsApp} colorScheme="brand">
+                  <Button onClick={openCalendar} colorScheme="brand">
                     Agendar
                   </Button>
                 </Flex>
