@@ -9,7 +9,7 @@ import Topic from '../Topic/Topic';
 
 export default function Offers() {
   return (
-    <Box py="4rem">
+    <Box py="4rem" id="offers">
       <Topic
         label="NOSSOS SERVIÇOS"
         title="O que fazemos?"

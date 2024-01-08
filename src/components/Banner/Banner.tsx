@@ -14,7 +14,7 @@ import AnimatedView from '../Animated/AnimatedView';
 
 export default function Banner() {
   return (
-    <Box>
+    <Box id="home">
       <Box
         width="100%"
         height="100vh"

@@ -5,7 +5,7 @@ import BowsyLogo from '../../assets/img/bowsy-logo.svg';
 
 export default function Partners() {
   return (
-    <Box py="4rem">
+    <Box py="4rem" id="partners">
       <Topic
         label="NOSSOS CLIENTES"
         title="Histórias de sucesso"
