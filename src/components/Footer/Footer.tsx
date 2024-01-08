@@ -83,7 +83,9 @@ export default function Footer() {
         spacing={3}
         justifyContent="space-between"
       >
-        <Text fontSize="md">© 2024 Devity Agência Digital</Text>
+        <Text fontSize="md">
+          © 2024 Devity Agência Digital - CNPJ 53.415.869/0001-63
+        </Text>
         <Stack spacing={2} direction="row">
           <IconButton
             icon={<IoLogoWhatsapp />}
