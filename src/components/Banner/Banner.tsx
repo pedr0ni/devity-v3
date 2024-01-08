@@ -10,6 +10,7 @@ import {
 } from '@chakra-ui/react';
 import Header from '../Header/Header';
 import MainContent from '../../assets/img/main-content.svg';
+import AnimatedView from '../Animated/AnimatedView';
 
 export default function Banner() {
   return (
@@ -30,7 +31,9 @@ export default function Banner() {
           width="100vw"
           justifyContent="center"
         >
-          <Image src={MainContent} />
+          <AnimatedView animation="from-top">
+            <Image src={MainContent} />
+          </AnimatedView>
         </Flex>
 
         <Flex
@@ -39,34 +42,36 @@ export default function Banner() {
           alignItems="center"
           flexDirection="column"
         >
-          <Container
-            maxW="container.md"
-            display="flex"
-            flexDirection="column"
-            justifyContent="center"
-            alignItems="center"
-            gap="2rem"
-          >
-            <Heading color="gray.700" textAlign="center" as="h1" size="2xl">
-              Potencialize a força da sua marca com um novo site
-            </Heading>
-            <Text color="gray.600" textAlign="center">
-              Nosso serviço de criação de sites incríveis pode aumentar sua
-              venda em até 30%. Pronto para desbloquear a melhor parte do seu
-              negócio?
-            </Text>
-            <Flex flexDirection="column" alignItems="center" gap="0.5rem">
-              <Flex gap="0.5rem">
-                <Input
-                  width="260px"
-                  bgColor="white"
-                  placeholder="Digite seu e-mail"
-                />
-                <Button colorScheme="brand">Agendar</Button>
+          <AnimatedView animation="from-bottom">
+            <Container
+              maxW="container.md"
+              display="flex"
+              flexDirection="column"
+              justifyContent="center"
+              alignItems="center"
+              gap="2rem"
+            >
+              <Heading color="gray.700" textAlign="center" as="h1" size="2xl">
+                Potencialize a força da sua marca com um novo site
+              </Heading>
+              <Text color="gray.600" textAlign="center">
+                Nosso serviço de criação de sites incríveis pode aumentar sua
+                venda em até 30%. Pronto para desbloquear a melhor parte do seu
+                negócio?
+              </Text>
+              <Flex flexDirection="column" alignItems="center" gap="0.5rem">
+                <Flex gap="0.5rem">
+                  <Input
+                    width="260px"
+                    bgColor="white"
+                    placeholder="Digite seu e-mail"
+                  />
+                  <Button colorScheme="brand">Agendar</Button>
+                </Flex>
+                <Text color="gray.600">Consultoria gratuita</Text>
               </Flex>
-              <Text color="gray.600">Consultoria gratuita</Text>
-            </Flex>
-          </Container>
+            </Container>
+          </AnimatedView>
         </Flex>
       </Box>
     </Box>
