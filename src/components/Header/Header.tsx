@@ -1,5 +1,6 @@
 import {Box, Button, Container, Flex, Image} from '@chakra-ui/react';
 import LogoPrimary from '../../assets/img/logo-primary-2.png';
+import HeaderLink from '../HeaderLink/HeaderLink';
 
 export default function Header() {
   return (
@@ -14,18 +15,10 @@ export default function Header() {
       >
         <Image width="125px" src={LogoPrimary} />
         <Flex gap="2rem" display={{base: 'none', md: 'flex'}}>
-          <Button variant="link" colorScheme="gray.600">
-            Home
-          </Button>
-          <Button variant="link" colorScheme="gray.600">
-            Serviços
-          </Button>
-          <Button variant="link" colorScheme="gray.600">
-            Parceiros
-          </Button>
-          <Button variant="link" colorScheme="gray.600">
-            Sobre
-          </Button>
+          <HeaderLink>Home</HeaderLink>
+          <HeaderLink>Serviços</HeaderLink>
+          <HeaderLink>Parceiros</HeaderLink>
+          <HeaderLink>Sobre</HeaderLink>
         </Flex>
         <Button display={{base: 'none', md: 'flex'}} colorScheme="brand">
           Fale Conosco

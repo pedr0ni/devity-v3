@@ -19,13 +19,14 @@ export default function Banner() {
         height="100vh"
         position="relative"
         overflow="hidden"
-        background="linear-gradient(to top, #fad78c, #fff);"
+        // background="linear-gradient(to top, #fad78c, #fff);"
+        bgGradient="linear(to-t, brand.100, whiteAlpha.100)"
       >
         <Header />
 
         <Flex
           position="absolute"
-          bottom={{base: 120, md: -240}}
+          bottom={{base: 0, md: -240}}
           width="100vw"
           justifyContent="center"
         >

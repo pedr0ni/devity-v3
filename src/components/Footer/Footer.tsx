@@ -81,7 +81,7 @@ export default function Footer() {
         justifyContent="space-between"
       >
         <Text fontSize="md">© 2024 Devity Agência Digital</Text>
-        <Stack spacing={2} direction={{base: 'column', md: 'row'}}>
+        <Stack spacing={2} direction="row">
           <IconButton
             icon={<IoLogoWhatsapp />}
             aria-label="WhatsApp"

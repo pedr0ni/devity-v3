@@ -18,7 +18,7 @@ export default function Offers() {
       />
 
       <Container maxW="container.lg">
-        <SimpleGrid columns={3} spacing="1rem">
+        <SimpleGrid columns={{base: 1, lg: 3}} spacing="1rem">
           <OfferCard
             icon={IoLaptopOutline}
             heading="Landing Pages"
