@@ -36,7 +36,7 @@ const questions = [
 
 export default function FAQ() {
   return (
-    <Box bgColor="orange.50" py="4rem">
+    <Box bgColor="gray.100" py="4rem">
       <Topic label="PERGUNTAS FREQUENTES" title="FAQ" text="" />
 
       <Container maxW="container.md">

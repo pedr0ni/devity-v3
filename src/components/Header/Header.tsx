@@ -1,5 +1,5 @@
 import {Box, Button, Container, Flex, Image} from '@chakra-ui/react';
-import LogoPrimary from '../../assets/img/logo-primary.png';
+import LogoPrimary from '../../assets/img/logo-primary-2.png';
 
 export default function Header() {
   return (
