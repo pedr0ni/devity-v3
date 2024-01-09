@@ -14,6 +14,7 @@ import AnimatedView from '../Animated/AnimatedView';
 import openCalendar from '../../functions/openCalendar/openCalendar';
 import {useFormik} from 'formik';
 import emailSchema from './email.schema';
+import * as amplitude from '@amplitude/analytics-browser';
 
 export default function Banner() {
   const {values, setFieldValue, handleSubmit, errors} = useFormik({
@@ -23,9 +24,7 @@ export default function Banner() {
     enableReinitialize: true,
     validationSchema: emailSchema,
     onSubmit: value => {
-      (global as any).gtag('event', 'booking_clicked', {
-        email: value.email,
-      });
+      amplitude.track('Booking', value);
       openCalendar();
     },
   });

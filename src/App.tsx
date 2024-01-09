@@ -7,6 +7,7 @@ import Partners from './components/Partners/Partners';
 import CallToAction from './components/CallToAction/CallToAction';
 import Footer from './components/Footer/Footer';
 import {useEffect, useState} from 'react';
+import * as amplitude from '@amplitude/analytics-browser';
 
 function App() {
   const [loading, setLoading] = useState(
@@ -14,6 +15,7 @@ function App() {
   );
 
   useEffect(() => {
+    amplitude.init('c64932dc234e2c07ce015b09ccb634a2');
     setTimeout(() => setLoading(false), 1000);
   }, []);
 
