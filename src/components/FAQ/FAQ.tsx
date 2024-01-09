@@ -9,6 +9,7 @@ import {
 } from '@chakra-ui/react';
 import Topic from '../Topic/Topic';
 import AnimatedView from '../Animated/AnimatedView';
+import LinesBg from '../../assets/img/lines-bg.svg';
 
 const questions = [
   {
@@ -37,7 +38,13 @@ const questions = [
 
 export default function FAQ() {
   return (
-    <Box bgColor="gray.100" py="4rem" id="faq">
+    <Box
+      backgroundImage={`url(${LinesBg})`}
+      backgroundRepeat="no-repeat"
+      backgroundSize="cover"
+      py="4rem"
+      id="faq"
+    >
       <Topic label="PERGUNTAS FREQUENTES" title="FAQ" text="" />
 
       <Container maxW="container.md">
@@ -47,7 +54,7 @@ export default function FAQ() {
               <AccordionItem
                 border="none"
                 my="1rem"
-                bgColor="white"
+                bgColor="gray.200"
                 borderRadius="6px"
                 key={question.title}
               >
