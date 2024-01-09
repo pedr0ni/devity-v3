@@ -12,8 +12,24 @@ import Header from '../Header/Header';
 import MainContent from '../../assets/img/main-content.svg';
 import AnimatedView from '../Animated/AnimatedView';
 import openCalendar from '../../functions/openCalendar/openCalendar';
+import {useFormik} from 'formik';
+import emailSchema from './email.schema';
 
 export default function Banner() {
+  const {values, setFieldValue, handleSubmit, errors} = useFormik({
+    initialValues: {
+      email: '',
+    },
+    enableReinitialize: true,
+    validationSchema: emailSchema,
+    onSubmit: value => {
+      (global as any).gtag('event', 'booking_clicked', {
+        email: value.email,
+      });
+      openCalendar();
+    },
+  });
+
   return (
     <Box id="home">
       <Box
@@ -60,16 +76,25 @@ export default function Banner() {
                 negócio?
               </Text>
               <Flex flexDirection="column" alignItems="center" gap="0.5rem">
-                <Flex gap="0.5rem">
-                  <Input
-                    width="260px"
-                    bgColor="white"
-                    placeholder="Digite seu e-mail"
-                  />
-                  <Button onClick={openCalendar} colorScheme="brand">
-                    Agendar
-                  </Button>
-                </Flex>
+                <form onSubmit={handleSubmit}>
+                  <Flex gap="0.5rem">
+                    <Input
+                      width="260px"
+                      bgColor="white"
+                      type="email"
+                      placeholder="Digite seu e-mail"
+                      value={values.email}
+                      onChange={e => {
+                        setFieldValue('email', e.target.value);
+                      }}
+                      isInvalid={Boolean(errors.email)}
+                    />
+                    <Button type="submit" colorScheme="brand">
+                      Agendar
+                    </Button>
+                  </Flex>
+                </form>
+
                 <Text color="gray.600">Consultoria gratuita</Text>
               </Flex>
             </Container>

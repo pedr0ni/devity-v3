@@ -50,13 +50,12 @@ export default function FAQ() {
       <Container maxW="container.md">
         <Accordion allowMultiple>
           {questions.map(question => (
-            <AnimatedView animation="from-left">
+            <AnimatedView key={question.title} animation="from-left">
               <AccordionItem
                 border="none"
                 my="1rem"
                 bgColor="gray.200"
                 borderRadius="6px"
-                key={question.title}
               >
                 <h2>
                   <AccordionButton py="1.5rem">
