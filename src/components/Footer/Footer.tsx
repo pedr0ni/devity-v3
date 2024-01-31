@@ -38,9 +38,7 @@ export default function Footer() {
         direction={{base: 'column', md: 'row'}}
       >
         <Box maxW="300px">
-          <Link href="https://templateskart.com" isExternal>
-            <Image width="150px" src={LogoPrimary} />
-          </Link>
+          <Image width="150px" src={LogoPrimary} />
           <Text mt={2} color="gray.500" fontSize="md">
             Inovação, excelência e parceria para o sucesso do seu projeto
             online.
